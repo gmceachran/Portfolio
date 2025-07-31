@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="container py-16 pt-32" style={{ marginTop: '32px' }}>
       <div className="flex flex-col lg:flex-row items-center gap-8">
-        <div className="flex-shrink-0">
+        <div className="flex-shrink-0 md:pl-8">
           <img 
             src="/gabriel-photo.jpg" 
             alt="Gabriel McEachran" 
