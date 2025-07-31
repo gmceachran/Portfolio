@@ -2,13 +2,6 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 
 export function Hero() {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
-
   return (
     <section className="container py-16 pt-32" style={{ marginTop: '32px' }}>
       <div className="flex flex-col lg:flex-row items-center gap-8">
@@ -29,8 +22,8 @@ export function Hero() {
             I'm a full-stack developer with a focus on clean, fast, and user-friendly web apps. I enjoy building elegant interfaces, solving real-world problems, and learning fast to meet ambitious goals. Currently, I'm helping startups bring their ideas to life with investor-ready products.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button size="lg" onClick={() => scrollToSection('projects')}>View My Work</Button>
-            <Button variant="outline" size="lg" onClick={() => scrollToSection('contact')}>Get In Touch</Button>
+            <Button size="lg">View My Work</Button>
+            <Button variant="outline" size="lg">Get In Touch</Button>
           </div>
         </div>
       </div>
