@@ -32,7 +32,7 @@ function App() {
         <Separator className="my-16" />
         
         {/* Projects Section */}
-        <section className="container py-16">
+        <section id="projects" className="container py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -50,7 +50,7 @@ function App() {
         <Separator className="my-16" />
 
         {/* Skills Section */}
-        <section className="container py-16">
+        <section id="skills" className="container py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Skills & Technologies</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ function App() {
         <Separator className="my-16" />
 
         {/* Contact Section */}
-        <section className="container py-16">
+        <section id="contact" className="container py-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
