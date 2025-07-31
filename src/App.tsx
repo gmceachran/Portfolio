@@ -4,6 +4,7 @@ import { ProjectCard } from "@/components/ProjectCard"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { Button } from "@/components/ui/button"
 
 function App() {
   const projects = [
@@ -88,20 +89,21 @@ function App() {
               Feel free to reach out if you'd like to work together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:gabemceachran@gmail.com" 
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-              >
-                Email Me
-              </a>
-              <a 
-                href="https://github.com/gmceachran" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
-              >
-                GitHub
-              </a>
+              <Button onClick={() => {
+                navigator.clipboard.writeText('gabemceachran@gmail.com');
+                alert('Email copied to clipboard: gabemceachran@gmail.com');
+              }}>
+                Copy Email
+              </Button>
+              <Button variant="outline" asChild>
+                <a 
+                  href="https://github.com/gmceachran" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+              </Button>
             </div>
           </div>
         </section>
