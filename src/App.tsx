@@ -51,22 +51,22 @@ function App() {
         
         <Separator className="my-16" />
         
-        {/* About Section */}
-        <section id="about" className="container max-w-none py-16">
+                 {/* About Section */}
+         <section id="about" className="container max-w-none py-16 px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               I'm a passionate developer who loves building things that solve real problems.
             </p>
           </div>
-          <div className="flex justify-center">
-            <div className="max-w-4xl">
-                <p className="text-lg leading-relaxed mb-6">
-                  I've been working with <a href="https://brock.software/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700 transition-colors">Brock Software</a> for six months, handling both development and sales responsibilities. 
-                  I believe this expirience has given me a unique perspective to create genuinely valuable software.
-                </p>
-            </div>
-          </div>
+                     <div className="flex justify-center">
+             <div className="max-w-4xl text-center">
+                 <p className="text-lg leading-relaxed mb-6">
+                   I've been working with <a href="https://brock.software/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700 transition-colors">Brock Software</a> for six months, handling both development and sales responsibilities. 
+                   I believe this expirience has given me a unique perspective to create genuinely valuable software.
+                 </p>
+             </div>
+           </div>
         </section>
 
         <Separator className="my-16" />
@@ -148,8 +148,35 @@ function App() {
               </a>
             </div>
           </div>
-        </section>
-             </main>
+                 </section>
+       </main>
+       
+       {/* Footer */}
+               <footer className="border-t bg-white py-8 mt-16">
+          <div className="container max-w-none px-4">
+           <div className="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+             <div className="mb-4 md:mb-0">
+               <p className="text-sm text-gray-600">
+                 © 2024 Gabriel McEachran. All rights reserved.
+               </p>
+             </div>
+             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
+               <p className="text-sm text-gray-600">
+                 Built with React, TypeScript & Tailwind CSS
+               </p>
+               <a 
+                 href="https://github.com/gmceachran/portfolio" 
+                 target="_blank" 
+                 rel="noopener noreferrer"
+                 className="text-sm text-black underline hover:text-gray-700 transition-colors"
+               >
+                 View source
+               </a>
+             </div>
+           </div>
+         </div>
+       </footer>
+       
        <Toaster />
      </div>
    )

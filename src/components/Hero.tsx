@@ -11,8 +11,8 @@ export function Hero() {
   return (
     <section className="w-full py-16 pt-32 relative">
       {/* Content */}
-      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-8">
-        <div className="flex-shrink-0 md:pl-8">
+      <div className="container max-w-none flex flex-col lg:flex-row items-center gap-8">
+        <div className="flex-shrink-0 pl-8 lg:pl-12 flex justify-center lg:justify-start">
           <img 
             src="/gabriel-photo.jpg" 
             alt="Gabriel McEachran" 
@@ -26,7 +26,7 @@ export function Hero() {
           <p className="text-lg md:text-xl max-w-2xl mb-6">
             I'm a full-stack developer with a focus on clean, fast, and user-friendly web apps. I enjoy building elegant interfaces, solving real-world problems, and learning fast to meet ambitious goals. Currently, I'm helping startups bring their ideas to life with investor-ready products.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button size="lg" onClick={() => scrollToSection('projects')}>View My Work</Button>
             <Button size="lg" onClick={() => scrollToSection('contact')}>Get In Touch</Button>
           </div>
