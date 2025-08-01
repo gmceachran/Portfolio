@@ -4,8 +4,28 @@ import { ProjectCard } from "@/components/ProjectCard"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+import { Toaster } from "@/components/ui/toaster"
+import { useToast } from "@/hooks/use-toast"
 
 function App() {
+  const { toast } = useToast()
+  
+  const copyEmailToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText('gabemceachran@gmail.com')
+      toast({
+        title: "Email copied!",
+        description: "gabemceachran@gmail.com has been copied to your clipboard.",
+      })
+    } catch {
+      toast({
+        title: "Failed to copy",
+        description: "Please copy gabemceachran@gmail.com manually.",
+        variant: "destructive",
+      })
+    }
+  }
+
   const projects = [
     {
       title: "Grimoire - Worldbuilding Tool",
@@ -31,8 +51,28 @@ function App() {
         
         <Separator className="my-16" />
         
+        {/* About Section */}
+        <section id="about" className="container max-w-none py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">About Me</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              I'm a passionate developer who loves building things that solve real problems.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <div className="max-w-4xl">
+                <p className="text-lg leading-relaxed mb-6">
+                  I've been working with <a href="https://brock.software/" target="_blank" rel="noopener noreferrer" className="text-black underline hover:text-gray-700 transition-colors">Brock Software</a> for six months, handling both development and sales responsibilities. 
+                  I believe this expirience has given me a unique perspective to create genuinely valuable software.
+                </p>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16" />
+        
         {/* Projects Section */}
-        <section id="projects" className="container py-16">
+        <section id="projects" className="container max-w-none py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -52,37 +92,39 @@ function App() {
         <Separator className="my-16" />
 
         {/* Skills Section */}
-        <section id="skills" className="container py-16">
+        <section id="skills" className="container max-w-none py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Skills & Technologies</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               I've worked with a variety of technologies and frameworks. Here are the main ones I use regularly.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {skills.map((skillGroup) => (
-              <Card key={skillGroup.category}>
-                <CardHeader>
-                  <CardTitle>{skillGroup.category}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2">
-                    {skillGroup.items.map((skill) => (
-                      <Badge key={skill} variant="outline">
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="flex justify-center">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl">
+              {skills.map((skillGroup) => (
+                <Card key={skillGroup.category}>
+                  <CardHeader>
+                    <CardTitle>{skillGroup.category}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="flex flex-wrap gap-2">
+                      {skillGroup.items.map((skill) => (
+                        <Badge key={skill} variant="outline">
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
         </section>
 
         <Separator className="my-16" />
 
         {/* Contact Section */}
-        <section id="contact" className="container py-16">
+        <section id="contact" className="container max-w-none py-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -90,12 +132,12 @@ function App() {
               Feel free to reach out if you'd like to work together!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a 
-                href="mailto:gabemceachran@gmail.com" 
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 h-10 px-4 py-2"
-              >
-                Email Me
-              </a>
+                             <button 
+                 onClick={copyEmailToClipboard}
+                 className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 h-10 px-4 py-2"
+               >
+                 Copy Email
+               </button>
               <a 
                 href="https://github.com/gmceachran" 
                 target="_blank" 
@@ -107,9 +149,10 @@ function App() {
             </div>
           </div>
         </section>
-      </main>
-    </div>
-  )
-}
+             </main>
+       <Toaster />
+     </div>
+   )
+ }
 
 export default App
