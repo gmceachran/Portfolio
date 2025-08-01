@@ -32,7 +32,7 @@ function App() {
         <Separator className="my-16" />
         
         {/* Projects Section */}
-        <section className="container py-16">
+        <section id="projects" className="container py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Featured Projects</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -40,17 +40,19 @@ function App() {
               and opportunities to learn and grow as a developer.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {projects.map((project, index) => (
-              <ProjectCard key={index} {...project} />
-            ))}
+          <div className="flex justify-center">
+            <div className="max-w-md">
+              {projects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+              ))}
+            </div>
           </div>
         </section>
 
         <Separator className="my-16" />
 
         {/* Skills Section */}
-        <section className="container py-16">
+        <section id="skills" className="container py-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Skills & Technologies</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
@@ -80,7 +82,7 @@ function App() {
         <Separator className="my-16" />
 
         {/* Contact Section */}
-        <section className="container py-16">
+        <section id="contact" className="container py-16">
           <div className="text-center">
             <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
@@ -90,7 +92,7 @@ function App() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="mailto:gabemceachran@gmail.com" 
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-black text-white hover:bg-gray-800 h-10 px-4 py-2"
               >
                 Email Me
               </a>
@@ -98,7 +100,7 @@ function App() {
                 href="https://github.com/gmceachran" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-gray-300 bg-white hover:bg-gray-100 h-10 px-4 py-2"
               >
                 GitHub
               </a>
