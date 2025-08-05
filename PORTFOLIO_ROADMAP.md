@@ -1,7 +1,5 @@
 # Portfolio Enhancement Roadmap
 
-## Complete Portfolio Enhancement Roadmap
-
 ### 1. **Fix Technical Foundation** ✅ (Complete)
 - ✅ Fixed corrupted `tsconfig.json`
 - ✅ Fixed Tailwind CSS v4 PostCSS configuration
@@ -65,7 +63,8 @@
 5. ✅ **COMPLETED**: Hero buttons working (View My Work, Get In Touch)
 6. ✅ **COMPLETED**: Fix navigation buttons (add section IDs)
 7. ✅ **COMPLETED**: Add About section
-8. **Deploy portfolio** to GitHub Pages or similar
+8. **Add LinkedIn and GitHub links in header**
+9. **Deploy portfolio** to GitHub Pages or similar
 
 ## Detailed Website Analysis - What Still Needs Work
 
@@ -102,19 +101,20 @@
 
 ### **Phase 2: Core Features**
 5. ✅ **Add "About Me" section**
-6. **Deploy portfolio**
+6. **Add LinkedIn and GitHub links in header**
+7. **Deploy portfolio**
 
 ### **Phase 3: Content Polish**
-7. **Add testimonials section**
+8. **Add testimonials section**
 
 ## Progress Tracking
 
 - [x] Step 1: Technical Foundation
 - [x] Step 2: Content & Personalization (Complete)
-- [🔄] Step 3: Project Showcase Enhancement (20% complete)
+- [x] Step 3: Project Showcase Enhancement (Complete)
 - [x] Step 4: Professional Polish & Design (Complete)
 - [ ] Step 5: Content Expansion
-- [ ] Step 6: Technical Excellence
+- [x] Step 6: Technical Excellence
 - [ ] Step 7: Deployment & Hosting
 - [ ] Step 8: Professional Networking Integration
 - [x] Step 9: Performance & SEO (Complete)
