@@ -139,13 +139,20 @@ function App() {
                     “Gabe has been great to work with. He’s motivated, a clear communicator, and willing to take on responsibility.”
                   </p>
                   <div className="flex items-center justify-center space-x-2">
-                    <div className="w-10 h-10 rounded-full overflow-hidden">
-                      <img 
-                        src="/Bryant-Brock.jpg" 
-                        alt="Bryant Brock" 
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
+                    <a 
+                      href="https://www.linkedin.com/in/bryantleebrock/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="transition-transform hover:scale-105"
+                    >
+                      <div className="w-10 h-10 rounded-full overflow-hidden">
+                        <img 
+                          src="/Bryant-Brock.jpg" 
+                          alt="Bryant Brock" 
+                          className="w-full h-full object-cover cursor-pointer"
+                        />
+                      </div>
+                    </a>
                     <div className="text-left">
                       <p className="font-semibold">Bryant Brock</p>
                       <p className="text-sm text-gray-600">CEO, Brock Software</p>
