@@ -123,6 +123,42 @@ function App() {
 
         <Separator className="my-16" />
 
+        {/* Testimonials Section */}
+        <section id="testimonials" className="container max-w-none py-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">What People Say</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Here's what colleagues and clients have said about working with me.
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <div className="max-w-2xl">
+              <Card className="p-8">
+                <CardContent className="text-center">
+                  <p className="text-lg italic mb-4">
+                    “Gabe has been great to work with. He’s motivated, a clear communicator, and willing to take on responsibility.”
+                  </p>
+                  <div className="flex items-center justify-center space-x-2">
+                    <div className="w-10 h-10 rounded-full overflow-hidden">
+                      <img 
+                        src="/Bryant-Brock.jpg" 
+                        alt="Bryant Brock" 
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="text-left">
+                      <p className="font-semibold">Bryant Brock</p>
+                      <p className="text-sm text-gray-600">CEO, Brock Software</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        <Separator className="my-16" />
+
         {/* Contact Section */}
         <section id="contact" className="container max-w-none py-16">
           <div className="text-center">

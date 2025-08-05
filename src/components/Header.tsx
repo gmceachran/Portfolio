@@ -21,6 +21,7 @@ export function Header() {
             <Button variant="ghost" size="sm" onClick={() => scrollToSection('about')} className="text-black hover:bg-gray-100">About</Button>
             <Button variant="ghost" size="sm" onClick={() => scrollToSection('projects')} className="text-black hover:bg-gray-100">Projects</Button>
             <Button variant="ghost" size="sm" onClick={() => scrollToSection('skills')} className="text-black hover:bg-gray-100">Skills</Button>
+            <Button variant="ghost" size="sm" onClick={() => scrollToSection('testimonials')} className="text-black hover:bg-gray-100">Testimonials</Button>
             <Button variant="ghost" size="sm" onClick={() => scrollToSection('contact')} className="text-black hover:bg-gray-100">Contact</Button>
           </nav>
           <div className="flex items-center space-x-2 ml-6">

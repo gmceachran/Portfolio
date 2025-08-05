@@ -13,11 +13,18 @@ export function Hero() {
       {/* Content */}
       <div className="container max-w-none flex flex-col lg:flex-row items-center gap-8">
         <div className="flex-shrink-0 pl-8 lg:pl-12 flex justify-center lg:justify-start">
-          <img 
-            src="/gabriel-photo.jpg" 
-            alt="Gabriel McEachran" 
-            className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
-          />
+          <a 
+            href="https://www.linkedin.com/in/gabriel-mceachran-535a85351/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="transition-transform hover:scale-105"
+          >
+            <img 
+              src="/gabriel-photo.jpg" 
+              alt="Gabriel McEachran" 
+              className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-lg cursor-pointer"
+            />
+          </a>
         </div>
         <div className="text-center lg:text-left">
           <h1 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
